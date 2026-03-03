@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.jogo{
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid green;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+/* CANO */
+.cano{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: mexerCano 1.5s infinite linear;
+}
+
+@keyframes mexerCano{
+    from{ right: -80px; }
+    to{ right: 100%; }
+}
+
+/* MARIO */
+.mario{
+    width: 130px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* PULO */
+.pular{
+    animation: pulo 500ms ease-out;
+}
+
+@keyframes pulo{
+    0%{ bottom: 0; }
+    40%{ bottom: 180px; }
+    50%{ bottom: 180px; }
+    60%{ bottom: 180px; }
+    100%{ bottom: 0; }
+}
+
+/* NUVEM */
+.nuvem{
+    position: absolute;
+    width: 550px;
+    animation: moverNuvem 20s infinite linear;
+}
+
+@keyframes moverNuvem{
+    from{ right: -550px; }
+    to{ right: 100%; }
+}
+
+/* GAME OVER */
+.fim{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.reiniciar{
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer;
+}
